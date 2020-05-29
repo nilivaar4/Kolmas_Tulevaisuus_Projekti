@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class chooseFood : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    /*public GameObject week;
+    public int pirkka, pirkkaParhaat;
+    public int cost = 0;
+
+
+    void price()
+    {        
+        switch (cost)
+        {            
+            case pirkka:
+            {
+                    cost = 20;
+                break;
+            }
+            case pirkkaParhaat:
+            {
+                    cost = 40;
+
+                    break;
+            }
+
+        }       
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void PayFood()
     {
-        
+        int total = price();
+        week.GetComponent<playerMoney>().subtractMoney(total);
+
     }
+    */
 }
