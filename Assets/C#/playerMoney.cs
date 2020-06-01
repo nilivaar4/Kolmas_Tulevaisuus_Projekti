@@ -17,7 +17,7 @@ public class playerMoney : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneyText.text = money.ToString();
+        moneyText.text = money.ToString() + "€";
 
     }
     public void addMoney(int moneyToAdd)
