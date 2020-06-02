@@ -7,7 +7,7 @@ public class timeMonth : MonoBehaviour
 {
     string[] names = DateTimeFormatInfo.CurrentInfo.MonthNames;
     public Text timeText;
-    
+    int i = 0;
 
     void Start()
     {
@@ -32,19 +32,27 @@ public class timeMonth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
 
     public void Months()
     {
-     for (int i = 0; i < 12; i++)
-        {  
-            timeText.text = names[i];
+        if (i < 11)
+        {
+            i++;
             Debug.Log(names[i]);
-            //break;
+            timeText.text = names[i];
+        }
+
+        else
+        {
+            i = 0;
+            timeText.text = names[i];
+
         }
     }
 
 
-}
+    } 
+
