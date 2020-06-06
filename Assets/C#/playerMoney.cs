@@ -20,11 +20,14 @@ public class playerMoney : MonoBehaviour
         moneyText.text = money.ToString() + "€";
 
     }
+
+    //Add money to player
     public void addMoney(int moneyToAdd)
     {
         money += moneyToAdd;
     }
 
+    //Subtract players money
     public void subtractMoney(int moneyToSubtract)
     {
         money -= moneyToSubtract;
