@@ -35,4 +35,6 @@ public class weeklyMoney : MonoBehaviour
     {
         rentprice = 30;
     }
+
+
 }

@@ -5,14 +5,14 @@ using UnityEngine;
 public class chooseFood : MonoBehaviour
 {
 
-    /*public GameObject week;
+    public GameObject week;
     public int pirkka, pirkkaParhaat;
     public int cost = 0;
 
 
-    void price()
+   /* public void price()
     {        
-        switch (cost)
+        switch (costt)
         {            
             case pirkka:
             {
@@ -33,8 +33,8 @@ public class chooseFood : MonoBehaviour
 
     public void PayFood()
     {
-        int total = price();
-        week.GetComponent<playerMoney>().subtractMoney(total);
+        //int total = price();
+        //week.GetComponent<playerMoney>().subtractMoney(total);
 
     }
     */
