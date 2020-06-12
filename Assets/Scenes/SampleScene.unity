@@ -574,7 +574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "T\xE4h\xE4n tulee pelaajan rahasumma"
+  m_Text: "T\xE4h\xE4n tulee kuukausi"
 --- !u!222 &124605303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -611,7 +611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &154419208
 Transform:
   m_ObjectHideFlags: 0
@@ -2817,7 +2817,7 @@ GameObject:
   - component: {fileID: 769169450}
   - component: {fileID: 769169449}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Ruokavalinnat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2874,7 +2874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mene Kelaan
+  m_Text: Ruokavalinta
 --- !u!222 &769169450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3228,6 +3228,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931103679}
   m_CullTransparentMesh: 0
+--- !u!1 &964281194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964281195}
+  - component: {fileID: 964281196}
+  m_Layer: 5
+  m_Name: yesnoc#
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &964281195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964281194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 264.38733}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1223452469}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 42.639793, y: 2.3650346}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &964281196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964281194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9674c701bd4e3e647aa43aad196f6f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rngText: {fileID: 0}
+  yesno: 0
+  week: {fileID: 0}
 --- !u!1 &1018478107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,7 +3979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mene Kelaan
+  m_Text: Avaa tietokone
 --- !u!222 &1219245824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4066,6 +4117,7 @@ Transform:
   - {fileID: 2026483182}
   - {fileID: 1441922548}
   - {fileID: 1619611320}
+  - {fileID: 964281195}
   m_Father: {fileID: 2104695454}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4902,7 +4954,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1401708730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 964281196}
+        m_MethodName: makeChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1401708730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5364,6 +5427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619611320}
   - component: {fileID: 1619611319}
+  - component: {fileID: 1619611321}
   m_Layer: 0
   m_Name: PhoneOnOff
   m_TagString: Untagged
@@ -5398,6 +5462,21 @@ Transform:
   m_Father: {fileID: 1223452469}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619611321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619611318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9674c701bd4e3e647aa43aad196f6f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rngText: {fileID: 1883455821}
+  yesno: 0
+  week: {fileID: 0}
 --- !u!1 &1679130100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6380,6 +6459,7 @@ GameObject:
   - component: {fileID: 1883455820}
   - component: {fileID: 1883455822}
   - component: {fileID: 1883455821}
+  - component: {fileID: 1883455823}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6447,6 +6527,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883455819}
   m_CullTransparentMesh: 0
+--- !u!114 &1883455823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883455819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9674c701bd4e3e647aa43aad196f6f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rngText: {fileID: 1883455821}
+  yesno: 0
+  week: {fileID: 702588344}
 --- !u!1 &1901986775
 GameObject:
   m_ObjectHideFlags: 0
@@ -6885,6 +6980,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619611319}
         m_MethodName: ShowPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619611321}
+        m_MethodName: rngEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
