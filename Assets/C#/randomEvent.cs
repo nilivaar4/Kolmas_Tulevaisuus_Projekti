@@ -8,84 +8,95 @@ using UnityEngine.EventSystems;
 public class randomEvent : MonoBehaviour
 {
     public Text rngText;
-    public bool yesno = false;
-    public GameObject week;
+    public bool yesno;
+    public int choice;
+    public GameObject week, stress;
     System.Random rnd = new System.Random();
 
     // Start is called before the first frame update
     void Start()
     {
         //rngText.text = "";
-        
+        //yesno = true;
+        choice = rnd.Next(1, 6);
     }
 
     // Update is called once per frame
     void Update()
     {
-     //   rngEvent();
+        //   rngEvent();
+       // rngChoice();
     }
 
     public void makeChoice()
     {
         yesno = true;
+        Debug.Log("yesno");
+
     }
 
     public void rngEvent()
     {
-        int choice = rnd.Next(1, 6);
+        //yesno = false;
+        choice = rnd.Next(1, 6);
         Debug.Log("22222");
+
 
         if (choice == 1)
         {
             rngText.text = "Kamerusten kanssa pämppää";
-            Debug.Log("55555554");
-            if (yesno == true)
-            {
-                week.GetComponent<playerMoney>().subtractMoney(30);
-                Debug.Log("1");
-            }
+            
         }
+     
         if (choice == 2)
         {
             rngText.text = "Roadtripille halki suomen";
-            Debug.Log("6554645645654");
-
-            if (yesno == true)
-            {
-                week.GetComponent<playerMoney>().subtractMoney(30);
-                Debug.Log("2");
-
-            }
         }
         if (choice == 3)
         {
             rngText.text = "Bilettää";
-            if (yesno == true)
-            {
-                week.GetComponent<playerMoney>().subtractMoney(30);
-                Debug.Log("3");
-
-            }
+           
         }
         if (choice == 4)
         {
             rngText.text = "Tinder reffeille";
-            if (yesno == true)
-            {
-                week.GetComponent<playerMoney>().subtractMoney(30);
-                Debug.Log("4");
-
-            }
+            
         }
         if (choice == 5)
         {
-            rngText.text = "Kalsarigännit";
-            if (yesno == true)
-            {
-                week.GetComponent<playerMoney>().subtractMoney(30);
-                Debug.Log("5");
-
-            }
+            rngText.text = "Kalsarigännit";           
         }
+    }
+    public void rngChoice()
+    {
+        if (choice == 1 && yesno == true)
+        {
+            stress.GetComponent<stressAmount>().subtractHealth(10);
+            Debug.Log("1");
+            
+        }
+        if (choice == 2 && yesno == true)
+        {
+            stress.GetComponent<stressAmount>().subtractHealth(20);
+            Debug.Log("2");      
+        }
+        if(choice == 3 && yesno == true)
+        {
+            stress.GetComponent<stressAmount>().subtractHealth(30);
+            Debug.Log("3");
+
+        }
+        if (choice == 4 && yesno == true)
+        {
+            stress.GetComponent<stressAmount>().subtractHealth(40);
+            Debug.Log("4");
+        }
+        if(choice == 5 && yesno == true)
+        {
+            stress.GetComponent<stressAmount>().subtractHealth(50);
+            Debug.Log("5");
+
+        }
+
     }
 }

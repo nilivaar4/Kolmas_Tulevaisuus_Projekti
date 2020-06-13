@@ -8,8 +8,6 @@ public class weeklyMoney : MonoBehaviour
     public GameObject week;
     public int rentprice;
 
-
-
     // The money gained and lost when this is called
     public void Moneys()
     {        
@@ -20,7 +18,6 @@ public class weeklyMoney : MonoBehaviour
     }
 
     // The rent of the apartment you choose with the toggle buttons.
-
     public void toggle1()
     {
         rentprice = 10;

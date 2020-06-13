@@ -1647,7 +1647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &458344078
 Transform:
   m_ObjectHideFlags: 0
@@ -1893,6 +1893,112 @@ RectTransform:
   m_AnchoredPosition: {x: -11.763189, y: 7.9818645}
   m_SizeDelta: {x: 3785.4683, y: 521}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &501499008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501499009}
+  - component: {fileID: 501499012}
+  - component: {fileID: 501499010}
+  - component: {fileID: 501499011}
+  - component: {fileID: 501499013}
+  m_Layer: 5
+  m_Name: StressText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &501499009
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501499008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1085518628}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -78.7, y: -80.636}
+  m_SizeDelta: {x: 157.4, y: 31.58622}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &501499010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28dbffa09cfbe7b4e8a4fe843501d5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 501499011}
+--- !u!114 &501499011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "T\xE4h\xE4n tulee stressi"
+--- !u!222 &501499012
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501499008}
+  m_CullTransparentMesh: 0
+--- !u!114 &501499013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd99d56ebe6918439502fdb34d75735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthText: {fileID: 501499011}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,7 +3384,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rngText: {fileID: 0}
   yesno: 0
+  choice: 0
   week: {fileID: 0}
+  stress: {fileID: 501499008}
 --- !u!1 &1018478107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,13 +3719,14 @@ RectTransform:
   m_Children:
   - {fileID: 702588345}
   - {fileID: 124605300}
+  - {fileID: 501499009}
   m_Father: {fileID: 541219678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -84.79999, y: -32.42}
-  m_SizeDelta: {x: 157.40002, y: 64.84277}
+  m_AnchoredPosition: {x: -84.79999, y: -48.88}
+  m_SizeDelta: {x: 157.40002, y: 97.75992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085518629
 MonoBehaviour:
@@ -4966,6 +5075,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 964281196}
+        m_MethodName: rngChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1401708730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5476,7 +5596,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rngText: {fileID: 1883455821}
   yesno: 0
+  choice: 0
   week: {fileID: 0}
+  stress: {fileID: 501499008}
 --- !u!1 &1679130100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6541,7 +6663,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rngText: {fileID: 1883455821}
   yesno: 0
+  choice: 0
   week: {fileID: 702588344}
+  stress: {fileID: 0}
 --- !u!1 &1901986775
 GameObject:
   m_ObjectHideFlags: 0
