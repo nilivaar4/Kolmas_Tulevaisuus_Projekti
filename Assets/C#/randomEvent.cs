@@ -10,7 +10,7 @@ public class randomEvent : MonoBehaviour
     public Text rngText;
     public bool yesno;
     public int choice;
-    public GameObject week, stress;
+    public GameObject week, stress, food;
     System.Random rnd = new System.Random();
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class randomEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //   rngEvent();
+        // rngEvent();
        // rngChoice();
     }
 
@@ -38,10 +38,10 @@ public class randomEvent : MonoBehaviour
     public void rngEvent()
     {
         //yesno = false;
-        choice = rnd.Next(1, 6);
-        Debug.Log("22222");
+        //choice = rnd.Next(1, 6);
+       
 
-
+        //Change the text based on the "int choice"
         if (choice == 1)
         {
             rngText.text = "Kamerusten kanssa pämppää";
@@ -67,33 +67,40 @@ public class randomEvent : MonoBehaviour
             rngText.text = "Kalsarigännit";           
         }
     }
+
+    //When 'yes' Is pressed on the phone, something happens based on the "int choice"
     public void rngChoice()
     {
         if (choice == 1 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().subtractHealth(10);
+            stress.GetComponent<stressAmount>().addHealth(10);
+            food.GetComponent<playerMoney>().subtractMoney(75);
             Debug.Log("1");
             
         }
         if (choice == 2 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().subtractHealth(20);
+            stress.GetComponent<stressAmount>().addHealth(3);
+            food.GetComponent<playerMoney>().subtractMoney(150);
             Debug.Log("2");      
         }
         if(choice == 3 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().subtractHealth(30);
+            food.GetComponent<playerMoney>().subtractMoney(45);
+            stress.GetComponent<stressAmount>().addHealth(3);
             Debug.Log("3");
 
         }
         if (choice == 4 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().subtractHealth(40);
+            food.GetComponent<playerMoney>().subtractMoney(85);
+            stress.GetComponent<stressAmount>().addHealth(4);
             Debug.Log("4");
         }
         if(choice == 5 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().subtractHealth(50);
+            food.GetComponent<playerMoney>().subtractMoney(35);
+            stress.GetComponent<stressAmount>().addHealth(5);
             Debug.Log("5");
 
         }

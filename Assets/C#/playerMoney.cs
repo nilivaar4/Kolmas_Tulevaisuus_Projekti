@@ -18,6 +18,7 @@ public class playerMoney : MonoBehaviour
     void Update()
     {
         moneyText.text = money.ToString() + "€";
+        Limitations();
 
     }
 
@@ -31,6 +32,19 @@ public class playerMoney : MonoBehaviour
     public void subtractMoney(int moneyToSubtract)
     {
         money -= moneyToSubtract;
+    }
+
+    public void Limitations()
+    {
+        if (money <= 0)
+        {
+            moneyText.text = "0€";
+            money = 0;
+        }
+        else if (money >= 0)
+        {
+            moneyText.text = money.ToString() + "€";
+        }
     }
 
 }

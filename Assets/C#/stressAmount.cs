@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class stressAmount : MonoBehaviour
 {
     public Text HealthText;
-    int Health = 100;
+    int Health = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,8 @@ public class stressAmount : MonoBehaviour
     void Update()
     {
         HealthText.text = "Hyvinvointi: " + Health.ToString();
+        HealthLimit();
+        
     }
 
     //Add health to player
@@ -30,5 +32,16 @@ public class stressAmount : MonoBehaviour
     public void subtractHealth(int HealthToSubtract)
     {
         Health -= HealthToSubtract;
+    }
+    public void HealthLimit()
+    {
+        if (Health <= 0)
+        {
+            HealthText.text = "Kuolit Saatana";
+        }
+        else if (Health >= 100)
+        {
+            Health = 100;
+        }
     }
 }
