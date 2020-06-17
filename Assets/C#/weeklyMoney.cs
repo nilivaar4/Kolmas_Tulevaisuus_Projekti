@@ -5,7 +5,7 @@ using UnityEngine;
 public class weeklyMoney : MonoBehaviour
 {
    
-    public GameObject week;
+    public GameObject week, health;
     public int rentprice;
 
     // The money gained and lost when this is called
@@ -14,6 +14,7 @@ public class weeklyMoney : MonoBehaviour
 
         week.GetComponent<playerMoney>().addMoney(100);
         week.GetComponent<playerMoney>().subtractMoney(rentprice);
+        health.GetComponent<stressAmount>().subtractHealth(15);
 
     }
 

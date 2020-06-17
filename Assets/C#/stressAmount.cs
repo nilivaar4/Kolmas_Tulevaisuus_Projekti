@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class stressAmount : MonoBehaviour
 {
     public Text HealthText;
+    public GameObject Screen, Paneeel, caamera;
     int Health = 50;
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class stressAmount : MonoBehaviour
     {
         HealthText.text = "Hyvinvointi: " + Health.ToString();
         HealthLimit();
-        
+        GameOver();
     }
 
     //Add health to player
@@ -42,6 +43,18 @@ public class stressAmount : MonoBehaviour
         else if (Health >= 100)
         {
             Health = 100;
+        }
+    }
+    public void GameOver()
+    {
+        if (Health <= 0)
+        {
+            Paneeel.gameObject.SetActive(true);
+
+            Screen.gameObject.SetActive(false);
+            caamera.gameObject.SetActive(false);
+
+
         }
     }
 }
