@@ -10,7 +10,7 @@ public class randomEvent : MonoBehaviour
     public Text rngText;
     public bool yesno;
     public int choice;
-    public GameObject week, stress, food;
+    public GameObject week, stress, food, timepoints;
     System.Random rnd = new System.Random();
 
     // Start is called before the first frame update
@@ -75,6 +75,8 @@ public class randomEvent : MonoBehaviour
         {
             stress.GetComponent<stressAmount>().addHealth(10);
             food.GetComponent<playerMoney>().subtractMoney(75);
+            timepoints.GetComponent<timePoints>().subtracthours(16);
+
             Debug.Log("1");
             
         }
@@ -82,12 +84,16 @@ public class randomEvent : MonoBehaviour
         {
             stress.GetComponent<stressAmount>().addHealth(3);
             food.GetComponent<playerMoney>().subtractMoney(150);
+            timepoints.GetComponent<timePoints>().subtracthours(96);
+
             Debug.Log("2");      
         }
         if(choice == 3 && yesno == true)
         {
             food.GetComponent<playerMoney>().subtractMoney(45);
             stress.GetComponent<stressAmount>().addHealth(3);
+            timepoints.GetComponent<timePoints>().subtracthours(12);
+
             Debug.Log("3");
 
         }
@@ -95,12 +101,15 @@ public class randomEvent : MonoBehaviour
         {
             food.GetComponent<playerMoney>().subtractMoney(85);
             stress.GetComponent<stressAmount>().addHealth(4);
+            timepoints.GetComponent<timePoints>().subtracthours(4);
+
             Debug.Log("4");
         }
         if(choice == 5 && yesno == true)
         {
             food.GetComponent<playerMoney>().subtractMoney(35);
             stress.GetComponent<stressAmount>().addHealth(5);
+            timepoints.GetComponent<timePoints>().subtracthours(12);
             Debug.Log("5");
 
         }
