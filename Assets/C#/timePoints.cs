@@ -39,16 +39,17 @@ public class timePoints : MonoBehaviour
             hoursText.text = "0 Tuntia käytössä";
             hours = 0;
         }
-        else if (hours >= 0)
-        {
-            hoursText.text = hours.ToString() + " tuntia käytössä";
-
-        }
         else if (hours >= 720)
         {
             hours = 720;
             hoursText.text = hours.ToString() + " tuntia käytössä";
 
         }
+        else if (hours >= 0)
+        {
+            hoursText.text = hours.ToString() + " tuntia käytössä";
+
+        }
+        
     }
 }

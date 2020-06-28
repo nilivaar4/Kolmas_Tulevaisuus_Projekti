@@ -10,7 +10,7 @@ public class playerMoney : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        money = 500;
+        money = 2000;
         moneyText.text = money.ToString();
     }
 

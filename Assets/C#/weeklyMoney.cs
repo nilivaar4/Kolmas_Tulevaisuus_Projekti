@@ -5,7 +5,7 @@ using UnityEngine;
 public class weeklyMoney : MonoBehaviour
 {
    
-    public GameObject week, health;
+    public GameObject week, health, timepoints;
     public int rentprice, electro, insurance;
 
     // The money gained and lost when this is called
@@ -15,7 +15,7 @@ public class weeklyMoney : MonoBehaviour
         week.GetComponent<playerMoney>().addMoney(100);
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance);
         health.GetComponent<stressAmount>().subtractHealth(15);
-
+        timepoints.GetComponent<timePoints>().addhours(720);
     }
 
     // The rent of the apartment you choose with the toggle buttons.
