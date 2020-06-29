@@ -6,15 +6,22 @@ public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints;
-    public int rentprice, electro, insurance;
+    public int rentprice, electro, insurance, work, workstress;
+
+
+    void Start()
+    {
+        work = 0;
+        workstress = 0;
+    }
 
     // The money gained and lost when this is called
     public void Moneys()
-    {        
+    {
 
-        week.GetComponent<playerMoney>().addMoney(100);
+        week.GetComponent<playerMoney>().addMoney(work);
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance);
-        health.GetComponent<stressAmount>().subtractHealth(15);
+        health.GetComponent<stressAmount>().subtractHealth(10 + workstress);
         timepoints.GetComponent<timePoints>().addhours(720);
     }
 
@@ -33,6 +40,8 @@ public class weeklyMoney : MonoBehaviour
     {
         rentprice = 542;
     }
+
+    //The chosen electricity plan
     public void Electricity1()
     {
         electro = 31;
@@ -41,6 +50,8 @@ public class weeklyMoney : MonoBehaviour
     {
         electro = 42;
     }
+
+    //The chosen insurance
     public void insurance1()
     {
         insurance = 5;
@@ -52,5 +63,21 @@ public class weeklyMoney : MonoBehaviour
     public void insurance3()
     {
         insurance = 9;
+    }
+
+    //The chosen job
+    public void Job1()
+    {
+        work = 1920;
+        workstress = 10;
+    }
+    public void Job2()
+    {
+        work = 960;
+        workstress = 5;
+    }
+    public void Job3()
+    {
+        work = 320;
     }
 }
