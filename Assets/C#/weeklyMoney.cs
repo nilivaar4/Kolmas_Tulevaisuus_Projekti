@@ -7,12 +7,25 @@ public class weeklyMoney : MonoBehaviour
    
     public GameObject week, health, timepoints;
     public int rentprice, electro, insurance, work, workstress;
+    public bool loan, studymoney, housemoney;
+    
 
 
     void Start()
     {
         work = 0;
         workstress = 0;
+        loan = false;
+        studymoney = false;
+        housemoney = false;
+    }
+
+    void Update()
+    {
+        if(studymoney == false)
+        {
+            loan = false;
+        }
     }
 
     // The money gained and lost when this is called
@@ -23,6 +36,27 @@ public class weeklyMoney : MonoBehaviour
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance);
         health.GetComponent<stressAmount>().subtractHealth(10 + workstress);
         timepoints.GetComponent<timePoints>().addhours(720);
+
+        if(studymoney==true)
+        {
+            week.GetComponent<playerMoney>().addMoney(253);
+        }
+        if (housemoney == true && rentprice == 277)
+        {
+            week.GetComponent<playerMoney>().addMoney(236);
+        }
+        if (housemoney == true && rentprice == 542)
+        {
+            week.GetComponent<playerMoney>().addMoney(320);
+        }
+        if (housemoney == true && rentprice == 450)
+        {
+            week.GetComponent<playerMoney>().addMoney(320);
+        }
+        if (loan == true)
+        {
+            week.GetComponent<playerMoney>().addMoney(650);
+        }
     }
 
     // The rent of the apartment you choose with the toggle buttons.
@@ -68,16 +102,32 @@ public class weeklyMoney : MonoBehaviour
     //The chosen job
     public void Job1()
     {
+        housemoney = false;
+        studymoney = false;
         work = 1920;
         workstress = 10;
     }
     public void Job2()
     {
+        studymoney = false;
         work = 960;
         workstress = 5;
     }
     public void Job3()
     {
         work = 320;
+    }
+
+    public void getLoan()
+    {
+        loan = true;
+    }
+    public void studentMoney()
+    {
+        studymoney = true;
+    }
+    public void houseMoney()
+    {
+        housemoney = true;
     }
 }
