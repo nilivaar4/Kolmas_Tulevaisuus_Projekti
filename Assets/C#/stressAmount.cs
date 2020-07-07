@@ -7,12 +7,13 @@ public class stressAmount : MonoBehaviour
     public Text HealthText;
     public GameObject Screen, Paneeel, caamera;
     int Health = 50;
+   // public Renderer colourRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         HealthText.text = Health.ToString();
-
+     //   colourRenderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class stressAmount : MonoBehaviour
         HealthText.text = "Hyvinvointi: " + Health.ToString();
         HealthLimit();
         GameOver();
+       // totalHealth();
     }
 
     //Add health to player
@@ -57,4 +59,19 @@ public class stressAmount : MonoBehaviour
 
         }
     }
+   /* public void totalHealth()
+    {
+        if (Health <= 70)
+        {
+            colourRenderer.material.color = Color.green;
+        }
+        else if (Health > 70 && Health <= 30)
+        {
+            colourRenderer.material.color = Color.yellow;
+        }
+        else if (Health > 30 && Health <= 10)
+        {
+            colourRenderer.material.color = Color.red;
+        }
+    }*/
 }

@@ -7,7 +7,7 @@ public class weeklyMoney : MonoBehaviour
    
     public GameObject week, health, timepoints;
     public int rentprice, electro, insurance, work, workstress;
-    public bool loan, studymoney, housemoney;
+    public bool loan, studymoney, housemoney, job1, job2, job3;
     
 
 
@@ -18,10 +18,14 @@ public class weeklyMoney : MonoBehaviour
         loan = false;
         studymoney = false;
         housemoney = false;
+        job1 = false;
+        job2 = false;
+        job3 = false;
     }
 
     void Update()
     {
+        worksituation();
         if(studymoney == false)
         {
             loan = false;
@@ -102,20 +106,39 @@ public class weeklyMoney : MonoBehaviour
     //The chosen job
     public void Job1()
     {
-        housemoney = false;
-        studymoney = false;
+        job1 = true;
+        job2 = false;
+        job3 = false;      
         work = 1920;
         workstress = 10;
     }
     public void Job2()
     {
-        studymoney = false;
+        job1 = false;
+        job2 = true;
+        job3 = false;        
         work = 960;
         workstress = 5;
     }
     public void Job3()
     {
+        job1 = false;
+        job2 = false;
+        job3 = true;
         work = 320;
+    }
+
+    public void worksituation()
+    {
+        if (job1 == true)
+        {
+            housemoney = false;
+            studymoney = false;
+        }
+        if (job2 == true)
+        {
+            studymoney = false;
+        }
     }
 
     public void getLoan()

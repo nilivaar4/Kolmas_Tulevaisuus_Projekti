@@ -9,7 +9,7 @@ public class timePoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hours = 720;
+        hours = 560;
         hoursText.text = hours.ToString();
     }
 
@@ -39,9 +39,9 @@ public class timePoints : MonoBehaviour
             hoursText.text = "0 Tuntia käytössä";
             hours = 0;
         }
-        else if (hours >= 720)
+        else if (hours >= 560)
         {
-            hours = 720;
+            hours = 560;
             hoursText.text = hours.ToString() + " tuntia käytössä";
 
         }
