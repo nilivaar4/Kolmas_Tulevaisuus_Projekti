@@ -1715,7 +1715,7 @@ GameObject:
   - component: {fileID: 286791025}
   - component: {fileID: 286791024}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: keskihalpa text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1772,7 +1772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "T\xE4h\xE4 ruokaa"
+  m_Text: "Hk bl\xF6 1pkt\nSubutex 10 tablettia"
 --- !u!222 &286791025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2916,6 +2916,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 315674128}
+        m_MethodName: ShowPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 676115498}
         m_MethodName: ShowPanel
         m_Mode: 1
         m_Arguments:
@@ -5099,6 +5110,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635453586}
   m_CullTransparentMesh: 0
+--- !u!1 &676115497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676115499}
+  - component: {fileID: 676115498}
+  m_Layer: 0
+  m_Name: Buttons_On_Off 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676115498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676115497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8380f318debe3874094b2b999588c4a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Paneel: {fileID: 1102169899}
+--- !u!4 &676115499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676115497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1223452469}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702588344
 GameObject:
   m_ObjectHideFlags: 0
@@ -6998,7 +7053,7 @@ GameObject:
   - component: {fileID: 999187308}
   - component: {fileID: 999187307}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: kallistext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7055,7 +7110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "T\xE4h\xE4 ruokaa"
+  m_Text: "Kaviaaria 100g\nHanhenmaksaa 400g\nAnkanreisi\xE4 1kg"
 --- !u!222 &999187308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7469,7 +7524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1102169900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8154,7 +8209,7 @@ GameObject:
   - component: {fileID: 1172195675}
   - component: {fileID: 1172195674}
   m_Layer: 5
-  m_Name: Text
+  m_Name: halpatext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8211,7 +8266,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "T\xE4h\xE4 ruokaa"
+  m_Text: 'Hernekeitto 5x 400g
+
+    Nuudeleita 8x 50g
+
+    Lasol 500ml'
 --- !u!222 &1172195675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8488,6 +8547,7 @@ Transform:
   - {fileID: 935190121}
   - {fileID: 1560333207}
   - {fileID: 2037773799}
+  - {fileID: 676115499}
   - {fileID: 1287564513}
   m_Father: {fileID: 2104695454}
   m_RootOrder: 1
@@ -8770,6 +8830,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1999099125}
         m_MethodName: timer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 676115498}
+        m_MethodName: HidePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9128,7 +9199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1223452469}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301424273
 GameObject:
