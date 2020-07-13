@@ -5,9 +5,9 @@ using UnityEngine;
 public class weeklyMoney : MonoBehaviour
 {
    
-    public GameObject week, health, timepoints;
+    public GameObject week, health, timepoints, hw;
     public int rentprice, electro, insurance, work, workstress;
-    public bool loan, studymoney, housemoney, job1, job2, job3;
+    public bool loan, studymoney, housemoney, job1, job2, job3, grade;
     
 
 
@@ -21,6 +21,7 @@ public class weeklyMoney : MonoBehaviour
         job1 = false;
         job2 = false;
         job3 = false;
+        grade = false;
     }
 
     void Update()
@@ -39,7 +40,7 @@ public class weeklyMoney : MonoBehaviour
         week.GetComponent<playerMoney>().addMoney(work);
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance);
         health.GetComponent<stressAmount>().subtractHealth(10 + workstress);
-        timepoints.GetComponent<timePoints>().addhours(720);
+        timepoints.GetComponent<timePoints>().addhours(560);
 
         if(studymoney==true)
         {
@@ -153,4 +154,36 @@ public class weeklyMoney : MonoBehaviour
     {
         housemoney = true;
     }
+
+    public void homework1()
+    {
+        hw.GetComponent<Grade>().lowerGrade(1);
+        grade = true;
+        timepoints.GetComponent<timePoints>().subtracthours(20);
+    }
+    public void homework2()
+    {
+        grade = true;
+        timepoints.GetComponent<timePoints>().subtracthours(40);
+    }
+
+    public void homework3()
+    {
+        hw.GetComponent<Grade>().raiseGrade(1);
+        grade = true;
+        timepoints.GetComponent<timePoints>().subtracthours(60);
+    }
+    public void checkhw()
+    {
+        if (grade == false)
+        {
+            hw.GetComponent<Grade>().lowerGrade(2);
+            
+        }
+        else
+        {
+            grade = false;
+        }
+    }
 }
+
