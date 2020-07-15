@@ -6,7 +6,7 @@ public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints, hw;
-    public int rentprice, electro, insurance, work, workstress;
+    public int rentprice, electro, insurance, work, workstress, wifi;
     public bool loan, studymoney, housemoney, job1, job2, job3, grade;
     
 
@@ -103,7 +103,18 @@ public class weeklyMoney : MonoBehaviour
     {
         insurance = 9;
     }
-
+    public void plan1()
+    {
+        wifi = 9;
+    }
+    public void plan2()
+    {
+        wifi = 20;
+    }
+    public void plan3()
+    {
+        wifi = 32;
+    }
     //The chosen job
     public void Job1()
     {
