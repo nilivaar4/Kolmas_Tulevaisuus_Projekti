@@ -6,7 +6,7 @@ public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints, hw;
-    public int rentprice, electro, insurance, work, workstress, wifi;
+    public int rentprice, electro, insurance, work, workstress, wifi, workhours;
     public bool loan, studymoney, housemoney, job1, job2, job3, grade;
     
 
@@ -38,11 +38,12 @@ public class weeklyMoney : MonoBehaviour
     {
 
         week.GetComponent<playerMoney>().addMoney(work);
-        week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance);
+        week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance + wifi);
         health.GetComponent<stressAmount>().subtractHealth(10 + workstress);
         timepoints.GetComponent<timePoints>().addhours(560);
+        //timepoints.GetComponent<timePoints>().subtracthours(workhours);
 
-        if(studymoney==true)
+        if (studymoney==true)
         {
             week.GetComponent<playerMoney>().addMoney(253);
         }
@@ -123,6 +124,7 @@ public class weeklyMoney : MonoBehaviour
         job3 = false;      
         work = 1920;
         workstress = 10;
+        workhours = 160;
     }
     public void Job2()
     {
@@ -131,6 +133,7 @@ public class weeklyMoney : MonoBehaviour
         job3 = false;        
         work = 960;
         workstress = 5;
+        workhours = 120;
     }
     public void Job3()
     {
@@ -138,6 +141,7 @@ public class weeklyMoney : MonoBehaviour
         job2 = false;
         job3 = true;
         work = 320;
+        workhours = 32;
     }
 
     public void worksituation()
@@ -175,14 +179,14 @@ public class weeklyMoney : MonoBehaviour
     public void homework2()
     {
         grade = true;
-        timepoints.GetComponent<timePoints>().subtracthours(40);
+        timepoints.GetComponent<timePoints>().subtracthours(60);
     }
 
     public void homework3()
     {
         hw.GetComponent<Grade>().raiseGrade(1);
         grade = true;
-        timepoints.GetComponent<timePoints>().subtracthours(60);
+        timepoints.GetComponent<timePoints>().subtracthours(120);
     }
     public void checkhw()
     {

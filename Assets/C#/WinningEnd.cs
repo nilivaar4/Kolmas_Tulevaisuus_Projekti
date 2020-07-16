@@ -5,7 +5,7 @@ using UnityEngine;
 public class WinningEnd : MonoBehaviour
 {
     public int final_countdown = 0;
-    public GameObject game, ending;
+    public GameObject game, ending, cameraa;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +28,7 @@ public class WinningEnd : MonoBehaviour
         if(final_countdown == 48)
         {
             game.gameObject.SetActive(false);
+            cameraa.gameObject.SetActive(false);
             ending.gameObject.SetActive(true);
         }
     }

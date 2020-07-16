@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class stressAmount : MonoBehaviour
 {
-    public Text HealthText;
+    public Text HealthText, endHealthtext;
     public GameObject Screen, Paneeel, caamera;
     int Health = 50;
    // public Renderer colourRenderer;
@@ -13,13 +13,15 @@ public class stressAmount : MonoBehaviour
     void Start()
     {
         HealthText.text = Health.ToString();
-     //   colourRenderer = GetComponent<Renderer>();
+        endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
+        //   colourRenderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         HealthText.text = "Hyvinvointi: " + Health.ToString();
+        endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
         HealthLimit();
         GameOver();
        // totalHealth();

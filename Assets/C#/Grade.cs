@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Grade : MonoBehaviour
 {
     public int grade, countdown;
-    public Text gradeText;
+    public Text gradeText, endgradeText;
     public bool effort;
     //public GameObject ending, maingame;
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class Grade : MonoBehaviour
     void Update()
     {
         gradeText.text = "Keskiarvosi on " + grade.ToString();
+        endgradeText.text = "Voittaessasi pelin, arvosanasi oli " + grade.ToString() + "/5";
         Limitations();
         //gameover();
     }
