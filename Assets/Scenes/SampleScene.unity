@@ -856,6 +856,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoursText: {fileID: 107768859}
+  button1: {fileID: 41628323}
+  button2: {fileID: 1102169899}
+  button3: {fileID: 1934490105}
+  screen1: {fileID: 900659423}
+  screen2: {fileID: 11818403}
+  screen3: {fileID: 154419207}
+  caamera: {fileID: 1406297518}
+  doorbutton: {fileID: 1253678175}
 --- !u!114 &107768859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,7 +3649,6 @@ GameObject:
   - component: {fileID: 448645356}
   - component: {fileID: 448645358}
   - component: {fileID: 448645357}
-  - component: {fileID: 448645359}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3709,20 +3716,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448645355}
   m_CullTransparentMesh: 0
---- !u!114 &448645359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448645355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1477b670576dd5a4ea2fc3b5e7852bc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 702588346}
-  endmoneyText: {fileID: 448645357}
 --- !u!1 &458344077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,6 +4215,7 @@ Transform:
   m_Children:
   - {fileID: 1999099122}
   - {fileID: 315674127}
+  - {fileID: 1216596619}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8016,7 +8010,6 @@ GameObject:
   - component: {fileID: 1076536152}
   - component: {fileID: 1076536154}
   - component: {fileID: 1076536153}
-  - component: {fileID: 1076536155}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -8084,23 +8077,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076536151}
   m_CullTransparentMesh: 0
---- !u!114 &1076536155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076536151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02654810264f5e45950953dbf7cd5c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grade: 0
-  countdown: 0
-  gradeText: {fileID: 551206488}
-  endgradeText: {fileID: 1076536153}
-  effort: 0
 --- !u!1 &1085518627
 GameObject:
   m_ObjectHideFlags: 0
@@ -9109,6 +9085,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214856266}
   m_CullTransparentMesh: 0
+--- !u!1 &1216596618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216596619}
+  - component: {fileID: 1216596620}
+  - component: {fileID: 1216596622}
+  - component: {fileID: 1216596621}
+  m_Layer: 0
+  m_Name: "Loppun\xE4yt\xF6n statsit"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216596619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216596618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 503759814}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216596620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216596618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1477b670576dd5a4ea2fc3b5e7852bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 702588346}
+  endmoneyText: {fileID: 448645357}
+--- !u!114 &1216596621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216596618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02654810264f5e45950953dbf7cd5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grade: 0
+  countdown: 0
+  gradeText: {fileID: 551206488}
+  endgradeText: {fileID: 1076536153}
+  effort: 0
+--- !u!114 &1216596622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216596618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd99d56ebe6918439502fdb34d75735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthText: {fileID: 501499011}
+  endHealthtext: {fileID: 1918683852}
+  Screen: {fileID: 2104695453}
+  Paneeel: {fileID: 704004845}
+  caamera: {fileID: 519420028}
 --- !u!1 &1219245821
 GameObject:
   m_ObjectHideFlags: 0
@@ -14499,7 +14556,6 @@ GameObject:
   - component: {fileID: 1918683851}
   - component: {fileID: 1918683853}
   - component: {fileID: 1918683852}
-  - component: {fileID: 1918683854}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -14567,23 +14623,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918683850}
   m_CullTransparentMesh: 0
---- !u!114 &1918683854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918683850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd99d56ebe6918439502fdb34d75735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthText: {fileID: 501499011}
-  endHealthtext: {fileID: 1918683852}
-  Screen: {fileID: 2104695453}
-  Paneeel: {fileID: 704004845}
-  caamera: {fileID: 519420028}
 --- !u!1 &1919500948
 GameObject:
   m_ObjectHideFlags: 0

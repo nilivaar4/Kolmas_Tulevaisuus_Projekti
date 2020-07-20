@@ -6,6 +6,7 @@ public class timePoints : MonoBehaviour
 {
     public Text hoursText;
     int hours;
+    public GameObject button1, button2, button3, screen1, screen2, screen3, caamera, doorbutton;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class timePoints : MonoBehaviour
     {
         hoursText.text = hours.ToString() + " tuntia käytössä";
         Limitations();
+        ButtonsOff();
     }
 
     //Add money to player
@@ -31,6 +33,54 @@ public class timePoints : MonoBehaviour
     {
         hours -= hoursToSubtract;
     }
+
+    public void ButtonsOff()
+    {
+        /*if (hours <= 0 && button1.activeSelf)
+        {
+            button1.gameObject.SetActive(false);
+            if (screen1.activeSelf)
+            {
+                screen1.gameObject.SetActive(false);
+                caamera.gameObject.SetActive(true);
+            }
+        }
+        else if (hours >= 0 && !button1.activeSelf)
+        {
+            button1.gameObject.SetActive(true);
+        }*/
+        if (hours <= 0 && button2.activeSelf)
+        {
+            button2.gameObject.SetActive(false);
+            if (screen2.activeSelf)
+            {
+                screen2.gameObject.SetActive(false);
+                caamera.gameObject.SetActive(true);
+            }
+        }
+        else if (hours >= 0 && !button2.activeSelf)
+        {
+            //button2.gameObject.SetActive(true);
+        }
+        if (hours <= 0 && button3.activeSelf)
+        {
+            button3.gameObject.SetActive(false);
+            if (screen3.activeSelf)
+            {
+                screen3.gameObject.SetActive(false);
+                caamera.gameObject.SetActive(true);
+            }
+        }
+        else if (hours >= 0 && !button3.activeSelf)
+        {
+            //button3.gameObject.SetActive(true);
+        }
+        if (hours == 0 && !doorbutton.activeSelf)
+        {
+            doorbutton.gameObject.SetActive(true);
+        }
+    }
+
 
     public void Limitations()
     {
