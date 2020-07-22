@@ -20,6 +20,7 @@ public class timePoints : MonoBehaviour
         hoursText.text = hours.ToString() + " tuntia käytössä";
         Limitations();
         ButtonsOff();
+        work();
     }
 
     //Add money to player
@@ -81,6 +82,15 @@ public class timePoints : MonoBehaviour
         }
     }
 
+    public void work()
+    {
+        GameObject workings = GameObject.Find("Door button");
+        weeklyMoney weeklymoney = workings.GetComponent<weeklyMoney>();
+        if (hours == 560 && weeklymoney.workhours >= 0)
+        {
+            subtracthours(weeklymoney.workhours);
+        }
+    }
 
     public void Limitations()
     {

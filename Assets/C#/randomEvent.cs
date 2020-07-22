@@ -46,15 +46,15 @@ public class randomEvent : MonoBehaviour
         //Change the text based on the "int choice"
         if (choice == 1)
         {
-            rngText.text = "Kamerusten kanssa pämppää";           
+            rngText.text = "Kaverisi pyysivät mukaan kalaretkelle pariksi päiväksi. Lähdetkö?";           
         }
         if (choice == 2)
         {
-            rngText.text = "Roadtripille halki suomen";
+            rngText.text = "Kaverisi pyysivät lähtemään roadtripille kiertelemään suomea pariksi päiväksi. Lähdetkö?";
         }
         if (choice == 3)
         {
-            rngText.text = "Bilettää";           
+            rngText.text = "Vanhempasi kyselivät, että josko kävisit heidän luonaan yöpymässä. Lähdetkö?";           
         }
         if (choice == 4)
         {

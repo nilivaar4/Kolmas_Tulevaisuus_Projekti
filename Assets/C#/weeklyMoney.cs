@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints, hw;
-    public int rentprice, electro, insurance, work, workstress, wifi, workhours;
+    public int rentprice, electro, insurance, work, workstress, wifi, workhours, everything;
     public bool loan, studymoney, housemoney, job1, job2, job3, grade;
-    
+    public Text debts;
 
 
     void Start()
@@ -22,6 +24,7 @@ public class weeklyMoney : MonoBehaviour
         job2 = false;
         job3 = false;
         grade = false;
+        everything = rentprice + electro + insurance + wifi;
     }
 
     void Update()
@@ -31,7 +34,10 @@ public class weeklyMoney : MonoBehaviour
         {
             loan = false;
         }
+        everything = rentprice + electro + insurance + wifi;
+        debts.text = "Kuukausittaiset kulut: " + everything.ToString() + "€";
     }
+    
 
     // The money gained and lost when this is called
     public void Moneys()
@@ -123,7 +129,7 @@ public class weeklyMoney : MonoBehaviour
         job2 = false;
         job3 = false;      
         work = 1920;
-        workstress = 10;
+        workstress = 15;
         workhours = 160;
     }
     public void Job2()
@@ -132,7 +138,7 @@ public class weeklyMoney : MonoBehaviour
         job2 = true;
         job3 = false;        
         work = 960;
-        workstress = 5;
+        workstress = 10;
         workhours = 120;
     }
     public void Job3()
@@ -142,6 +148,7 @@ public class weeklyMoney : MonoBehaviour
         job3 = true;
         work = 320;
         workhours = 32;
+        workstress = 5;
     }
 
     public void worksituation()

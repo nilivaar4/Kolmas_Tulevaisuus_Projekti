@@ -20,7 +20,7 @@ public class stressAmount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HealthText.text = "Hyvinvointi: " + Health.ToString();
+        HealthText.text = "Hyvinvointi: " + Health.ToString() +"/100";
         endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
         HealthLimit();
         GameOver();

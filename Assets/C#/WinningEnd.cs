@@ -25,7 +25,7 @@ public class WinningEnd : MonoBehaviour
 
     public void won_the_game()
     {
-        if(final_countdown == 48)
+        if(final_countdown == 24)
         {
             game.gameObject.SetActive(false);
             cameraa.gameObject.SetActive(false);
