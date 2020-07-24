@@ -8,7 +8,7 @@ public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints, hw;
-    public int rentprice, electro, insurance, work, workstress, wifi, workhours, everything;
+    public int rentprice, electro, insurance, work, workstress, wifi, workhours, everything, home1, home2, electro1, plans1, plans2;
     public bool loan, studymoney, housemoney, job1, job2, job3, grade;
     public Text debts;
 
@@ -45,7 +45,8 @@ public class weeklyMoney : MonoBehaviour
 
         week.GetComponent<playerMoney>().addMoney(work);
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance + wifi);
-        health.GetComponent<stressAmount>().subtractHealth(10 + workstress);
+        health.GetComponent<stressAmount>().subtractHealth(10 + workstress + home1 + plans1);
+        health.GetComponent<stressAmount>().addHealth(home2 + electro1 + plans2);
         timepoints.GetComponent<timePoints>().addhours(560);
         //timepoints.GetComponent<timePoints>().subtracthours(workhours);
 
@@ -75,6 +76,7 @@ public class weeklyMoney : MonoBehaviour
     public void toggle1()
     {
         rentprice = 277;
+        home1 = 5;
     }
 
     public void toggle2()
@@ -85,6 +87,7 @@ public class weeklyMoney : MonoBehaviour
     public void toggle3()
     {
         rentprice = 542;
+        home2 = 5;
     }
 
     //The chosen electricity plan
@@ -95,6 +98,7 @@ public class weeklyMoney : MonoBehaviour
     public void Electricity2()
     {
         electro = 42;
+        electro1 = 3;
     }
 
     //The chosen insurance
@@ -113,6 +117,7 @@ public class weeklyMoney : MonoBehaviour
     public void plan1()
     {
         wifi = 9;
+        plans1 = 5;
     }
     public void plan2()
     {
@@ -121,6 +126,7 @@ public class weeklyMoney : MonoBehaviour
     public void plan3()
     {
         wifi = 32;
+        plans2 = 5;
     }
     //The chosen job
     public void Job1()
@@ -149,6 +155,15 @@ public class weeklyMoney : MonoBehaviour
         work = 320;
         workhours = 32;
         workstress = 5;
+    }
+    public void NoJob()
+    {
+        job1 = false;
+        job2 = false;
+        job3 = false;
+        work = 0;
+        workhours = 0;
+        workstress = 0;
     }
 
     public void worksituation()
