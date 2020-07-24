@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 6cea4c0857984584ab83740adc69fd0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1239679785308396503
+    second: kirjat ss_0
+  - first:
+      213: 1125196405330685408
+    second: kirjat ss_1
+  - first:
+      213: -603163712618856482
+    second: kirjat ss_2
+  - first:
+      213: 7186129184888559173
+    second: kirjat ss_3
+  - first:
+      213: 7151279915319656440
+    second: kirjat ss_4
+  - first:
+      213: 6102121532599462109
+    second: kirjat ss_5
+  - first:
+      213: -4300217844379942314
+    second: kirjat ss_6
+  - first:
+      213: -7599454604956813496
+    second: kirjat ss_7
+  - first:
+      213: 7491724490244366947
+    second: kirjat ss_8
+  - first:
+      213: 705861494310545841
+    second: kirjat ss_9
+  - first:
+      213: 4457337971431212371
+    second: kirjat ss_10
+  - first:
+      213: -8890694655793586889
+    second: kirjat ss_11
+  - first:
+      213: 5478911516962181195
+    second: kirjat ss_0
+  - first:
+      213: 7513893545096187751
+    second: kirjat ss_1
+  - first:
+      213: -4876919919216074988
+    second: kirjat ss_2
+  - first:
+      213: -6323846059367336992
+    second: kirjat ss_3
+  - first:
+      213: 6579864971758156086
+    second: kirjat ss_4
+  - first:
+      213: -7734672642125091260
+    second: kirjat ss_5
+  - first:
+      213: 3165469710712758988
+    second: kirjat ss_6
+  - first:
+      213: -3800165496798934703
+    second: kirjat ss_7
+  - first:
+      213: 4991463964422254505
+    second: kirjat ss_8
+  - first:
+      213: 1614375202218628165
+    second: kirjat ss_9
+  - first:
+      213: 4783081162168011020
+    second: kirjat ss_10
+  - first:
+      213: -5842887742649240777
+    second: kirjat ss_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kirjat ss_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40d3540ff0090c40800000000000000
+      internalID: 5478911516962181195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_1
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f0f837e56b64860800000000000000
+      internalID: 7513893545096187751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_2
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f59192c23b15cb0800000000000000
+      internalID: -4876919919216074988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_3
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3f721a38f2d38a0800000000000000
+      internalID: -6323846059367336992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_4
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6393ea78450605b50800000000000000
+      internalID: 6579864971758156086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_5
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ea338463ce8a490800000000000000
+      internalID: -7734672642125091260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_6
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2ea463ee10eeb20800000000000000
+      internalID: 3165469710712758988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_7
+      rect:
+        serializedVersion: 2
+        x: 3241
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1598a936d99134bc0800000000000000
+      internalID: -3800165496798934703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_8
+      rect:
+        serializedVersion: 2
+        x: 3704
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af2d8c970e354540800000000000000
+      internalID: 4991463964422254505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_9
+      rect:
+        serializedVersion: 2
+        x: 4167
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544d07e61b9676610800000000000000
+      internalID: 1614375202218628165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_10
+      rect:
+        serializedVersion: 2
+        x: 4630
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0903e2a9fae06240800000000000000
+      internalID: 4783081162168011020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirjat ss_11
+      rect:
+        serializedVersion: 2
+        x: 5093
+        y: 0
+        width: 463
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73378e41e84e9eea0800000000000000
+      internalID: -5842887742649240777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
