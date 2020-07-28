@@ -7,21 +7,21 @@ public class stressAmount : MonoBehaviour
     public Text HealthText, endHealthtext;
     public GameObject Screen, Paneeel, caamera;
     int Health = 50;
-   // public Renderer colourRenderer;
+   // public Renderer colourRenderer;       Trying to get colour to work here
 
     // Start is called before the first frame update
     void Start()
     {
         HealthText.text = Health.ToString();
         endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
-        //   colourRenderer = GetComponent<Renderer>();
+        //   colourRenderer = GetComponent<Renderer>();     Trying to get colour to work here
     }
 
     // Update is called once per frame
     void Update()
     {
-        HealthText.text = "Hyvinvointi: " + Health.ToString() +"/100";
-        endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
+        HealthText.text = "Hyvinvointi: " + Health.ToString() +"/100";  // The chosen "HealthText" shows this
+        endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100"; // The chosen "endHealthText" shows this
         HealthLimit();
         GameOver();
        // totalHealth();
@@ -38,6 +38,8 @@ public class stressAmount : MonoBehaviour
     {
         Health -= HealthToSubtract;
     }
+
+    //Make sure the Health can't be lower than 0 or higher than 100
     public void HealthLimit()
     {
         if (Health <= 0)
@@ -49,18 +51,22 @@ public class stressAmount : MonoBehaviour
             Health = 100;
         }
     }
+    //Lose the game if Health is 0 or less
     public void GameOver()
     {
         if (Health <= 0)
         {
+            //Enable "game over" screen, and disable the game and it's camer
             Paneeel.gameObject.SetActive(true);
-
             Screen.gameObject.SetActive(false);
             caamera.gameObject.SetActive(false);
 
 
         }
     }
+
+    //Trying to get a colour to change based on the amount of health
+
    /* public void totalHealth()
     {
         if (Health <= 70)

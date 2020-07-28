@@ -45,7 +45,7 @@ public class weeklyMoney : MonoBehaviour
 
         week.GetComponent<playerMoney>().addMoney(work);
         week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance + wifi);
-        health.GetComponent<stressAmount>().subtractHealth(10 + workstress + home1 + plans1);
+        health.GetComponent<stressAmount>().subtractHealth(15 + workstress + home1 + plans1);
         health.GetComponent<stressAmount>().addHealth(home2 + electro1 + plans2);
         timepoints.GetComponent<timePoints>().addhours(560);
         //timepoints.GetComponent<timePoints>().subtracthours(workhours);

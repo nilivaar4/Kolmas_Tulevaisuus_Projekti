@@ -58,51 +58,51 @@ public class randomEvent : MonoBehaviour
         }
         if (choice == 4)
         {
-            rngText.text = "Tinder reffeille";  
+            rngText.text = "Ystäväsi pyytää sinua mukaansa ravintolaan syömään illallista. Lähdetkö?";  
         }
         if (choice == 5)
         {
-            rngText.text = "Kalsarigännit";           
+            rngText.text = "Kaverisi pyytävät sinut mukaansa juhlimaan baariin. Lähdetkö?";           
         }
         if (choice == 6)
         {
-            rngText.text = "placeholder 6";
+            rngText.text = "Ystävälläsi on syntymäpäivä tänään. Tarjoatko hänelle illallisen?";
         }
         if (choice == 7)
         {
-            rngText.text = "placeholder 7";
+            rngText.text = "Vanhempasi kyselevät, josko sinua kiinnostaisi lähteä käymään heidän luonansa tekemässä vähän kotitöitä rahaa vastaan. Lähdetkö?";
         }
         if (choice == 8)
         {
-            rngText.text = "placeholder 8";
+            rngText.text = "Olet juhlimassa kavereidesi kanssa, ja nämä ilmoittavat, että on sinun vuorosi tarjota kierros juomia. Tarjoatko?";
         }
         if (choice == 9)
         {
-            rngText.text = "placeholder 9";
+            rngText.text = "Äitisi synttäri ovat tällä viikolla, ja hän onkin ilmoittanut etukäteen, ettei halua mitään kallista lahjaa. Ostatko hänelle lahjan?";
         }
         if (choice == 10)
         {
-            rngText.text = "placeholder 10";
+            rngText.text = "Videopeli, jonka julkaisua olet odottanut jo pitkään, on viimein julkaistu. Ostatko sen?";
         }
         if (choice == 11)
         {
-            rngText.text = "placeholder 11";
+            rngText.text = "Hammastasi on vihlonut nyt useamman päivän, ja päätät käydä tarkastamassa tilanteen ammattilaisella. Menetkö yksityiselle hammaslääkärille?";
         }
         if (choice == 12)
         {
-            rngText.text = "placeholder 12";
+            rngText.text = "Toisella paikkakunnalla on opiskelijabileet. Lähdetkö?";
         }
         if (choice == 13)
         {
-            rngText.text = "placeholder 13";
+            rngText.text = "Ajattelit, että voisit tänään tehdä vähän parempaa ruokaa kalliimmilla raaka-aineilla. Toimitko näin?";
         }
         if (choice == 14)
         {
-            rngText.text = "placeholder 14";
+            rngText.text = "Paikallisella vaatekaupalla on suuret alennushinnat ja hyviä tuotteita tarjolla. Ostatko sieltä jotain?";
         }
         if (choice == 15)
         {
-            rngText.text = "placeholder 15";
+            rngText.text = "Suosikkiartistisi on soittamassa läheisellä paikkakunnalla. Lähdetkö keikalle?";
         }
     }
     public void choices()
@@ -116,42 +116,42 @@ public class randomEvent : MonoBehaviour
         if (choice == 1 && yesno == true)
         {
             stress.GetComponent<stressAmount>().addHealth(10);
-            food.GetComponent<playerMoney>().subtractMoney(75);
-            timepoints.GetComponent<timePoints>().subtracthours(16);
+            food.GetComponent<playerMoney>().subtractMoney(50);
+            timepoints.GetComponent<timePoints>().subtracthours(48);
 
             Debug.Log("1");
             
         }
         if (choice == 2 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().addHealth(3);
-            food.GetComponent<playerMoney>().subtractMoney(150);
+            stress.GetComponent<stressAmount>().addHealth(10);
+            food.GetComponent<playerMoney>().subtractMoney(100);
             timepoints.GetComponent<timePoints>().subtracthours(96);
 
             Debug.Log("2");      
         }
         if(choice == 3 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(45);
-            stress.GetComponent<stressAmount>().addHealth(3);
-            timepoints.GetComponent<timePoints>().subtracthours(12);
+            food.GetComponent<playerMoney>().subtractMoney(15);
+            stress.GetComponent<stressAmount>().addHealth(5);
+            timepoints.GetComponent<timePoints>().subtracthours(24);
 
             Debug.Log("3");
 
         }
         if (choice == 4 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(85);
-            stress.GetComponent<stressAmount>().addHealth(4);
+            food.GetComponent<playerMoney>().subtractMoney(50);
+            stress.GetComponent<stressAmount>().addHealth(6);
             timepoints.GetComponent<timePoints>().subtracthours(4);
 
             Debug.Log("4");
         }
         if(choice == 5 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(35);
+            food.GetComponent<playerMoney>().subtractMoney(45);
             stress.GetComponent<stressAmount>().addHealth(5);
-            timepoints.GetComponent<timePoints>().subtracthours(12);
+            timepoints.GetComponent<timePoints>().subtracthours(8);
             Debug.Log("5");
 
         }
@@ -159,41 +159,38 @@ public class randomEvent : MonoBehaviour
         {
             stress.GetComponent<stressAmount>().addHealth(10);
             food.GetComponent<playerMoney>().subtractMoney(75);
-            timepoints.GetComponent<timePoints>().subtracthours(16);
+            timepoints.GetComponent<timePoints>().subtracthours(4);
 
             Debug.Log("1");
 
         }
         if (choice == 7 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().addHealth(3);
-            food.GetComponent<playerMoney>().subtractMoney(150);
-            timepoints.GetComponent<timePoints>().subtracthours(96);
+            stress.GetComponent<stressAmount>().subtractHealth(10);
+            food.GetComponent<playerMoney>().addMoney(75);
+            timepoints.GetComponent<timePoints>().subtracthours(6);
 
             Debug.Log("2");
         }
         if (choice == 8 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(45);
+            food.GetComponent<playerMoney>().subtractMoney(40);
             stress.GetComponent<stressAmount>().addHealth(3);
-            timepoints.GetComponent<timePoints>().subtracthours(12);
 
             Debug.Log("3");
 
         }
         if (choice == 9 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(85);
-            stress.GetComponent<stressAmount>().addHealth(4);
-            timepoints.GetComponent<timePoints>().subtracthours(4);
+            food.GetComponent<playerMoney>().subtractMoney(20);
+            stress.GetComponent<stressAmount>().addHealth(3);
 
             Debug.Log("4");
         }
         if (choice == 10 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(35);
+            food.GetComponent<playerMoney>().subtractMoney(40);
             stress.GetComponent<stressAmount>().addHealth(5);
-            timepoints.GetComponent<timePoints>().subtracthours(12);
             Debug.Log("5");
 
         }
@@ -201,40 +198,40 @@ public class randomEvent : MonoBehaviour
         {
             stress.GetComponent<stressAmount>().addHealth(10);
             food.GetComponent<playerMoney>().subtractMoney(75);
-            timepoints.GetComponent<timePoints>().subtracthours(16);
+            timepoints.GetComponent<timePoints>().subtracthours(3);
 
             Debug.Log("1");
 
         }
         if (choice == 12 && yesno == true)
         {
-            stress.GetComponent<stressAmount>().addHealth(3);
-            food.GetComponent<playerMoney>().subtractMoney(150);
-            timepoints.GetComponent<timePoints>().subtracthours(96);
+            stress.GetComponent<stressAmount>().addHealth(5);
+            food.GetComponent<playerMoney>().subtractMoney(75);
+            timepoints.GetComponent<timePoints>().subtracthours(15);
 
             Debug.Log("2");
         }
         if (choice == 13 && yesno == true)
         {
             food.GetComponent<playerMoney>().subtractMoney(45);
-            stress.GetComponent<stressAmount>().addHealth(3);
-            timepoints.GetComponent<timePoints>().subtracthours(12);
+            stress.GetComponent<stressAmount>().addHealth(10);
+            timepoints.GetComponent<timePoints>().subtracthours(8);
 
             Debug.Log("3");
 
         }
         if (choice == 14 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(85);
+            food.GetComponent<playerMoney>().subtractMoney(50);
             stress.GetComponent<stressAmount>().addHealth(4);
-            timepoints.GetComponent<timePoints>().subtracthours(4);
+            timepoints.GetComponent<timePoints>().subtracthours(2);
 
             Debug.Log("4");
         }
         if (choice == 15 && yesno == true)
         {
-            food.GetComponent<playerMoney>().subtractMoney(35);
-            stress.GetComponent<stressAmount>().addHealth(5);
+            food.GetComponent<playerMoney>().subtractMoney(79);
+            stress.GetComponent<stressAmount>().addHealth(15);
             timepoints.GetComponent<timePoints>().subtracthours(12);
             Debug.Log("5");
 
