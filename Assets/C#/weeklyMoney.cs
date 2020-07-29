@@ -15,6 +15,7 @@ public class weeklyMoney : MonoBehaviour
 
     void Start()
     {
+        //These could be useless, idk
         work = 0;
         workstress = 0;
         loan = false;
@@ -30,17 +31,18 @@ public class weeklyMoney : MonoBehaviour
     void Update()
     {
         worksituation();
+        
         if(studymoney == false)
         {
-            loan = false;
+            loan = false; //Can't have loan, if you don't have the "studymoney"
         }
         everything = rentprice + electro + insurance + wifi;
-        debts.text = "Kuukausittaiset kulut: " + everything.ToString() + "€";
+        debts.text = "Kuukausittaiset kulut: " + everything.ToString() + "€"; 
     }
     
 
-    // The money gained and lost when this is called
-    public void Moneys()
+    
+    public void Moneys() //The script for a button that makes you lose and gain money, health, and timepoints based on choices you have made. The choices are defined by functions below.
     {
 
         week.GetComponent<playerMoney>().addMoney(work);
@@ -114,6 +116,7 @@ public class weeklyMoney : MonoBehaviour
     {
         insurance = 9;
     }
+    //The chosen phone plan thingy
     public void plan1()
     {
         wifi = 9;
@@ -166,6 +169,7 @@ public class weeklyMoney : MonoBehaviour
         workstress = 0;
     }
 
+    //Can't have certain things if you have a certain job
     public void worksituation()
     {
         if (job1 == true)
@@ -178,7 +182,7 @@ public class weeklyMoney : MonoBehaviour
             studymoney = false;
         }
     }
-
+    //Simple functions for buttons
     public void getLoan()
     {
         loan = true;
@@ -191,7 +195,7 @@ public class weeklyMoney : MonoBehaviour
     {
         housemoney = true;
     }
-
+    //Doing homework, and how it affects.
     public void homework1()
     {
         hw.GetComponent<Grade>().lowerGrade(1);
@@ -210,6 +214,7 @@ public class weeklyMoney : MonoBehaviour
         grade = true;
         timepoints.GetComponent<timePoints>().subtracthours(120);
     }
+    //Check if player has done homework
     public void checkhw()
     {
         if (grade == false)

@@ -6,10 +6,7 @@ public class kaakelinKela : MonoBehaviour
 
     public GameObject Paneel;
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+  //Simple script to hide and show a certain thing
 
     public void ShowPanel()
     {

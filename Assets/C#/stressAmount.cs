@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class stressAmount : MonoBehaviour
 {
-    public Text HealthText, endHealthtext;
+    public Text HealthText, endHealthtext, GoHealthText;
     public GameObject Screen, Paneeel, caamera;
     int Health = 50;
    // public Renderer colourRenderer;       Trying to get colour to work here
@@ -22,6 +22,7 @@ public class stressAmount : MonoBehaviour
     {
         HealthText.text = "Hyvinvointi: " + Health.ToString() +"/100";  // The chosen "HealthText" shows this
         endHealthtext.text = "Voittaessasi pelin, hyvinvointisi oli " + Health.ToString() + "/100"; // The chosen "endHealthText" shows this
+        GoHealthText.text = "Hävitessäsi pelin, hyvinvointisi oli " + Health.ToString() + "/100";
         HealthLimit();
         GameOver();
        // totalHealth();
@@ -44,7 +45,7 @@ public class stressAmount : MonoBehaviour
     {
         if (Health <= 0)
         {
-            HealthText.text = "Kuolit Saatana";
+            GoHealthText.text = "Hävisit, koska hyvinvointisi oli 0";
         }
         else if (Health >= 100)
         {

@@ -6,13 +6,9 @@ using UnityEngine.UI;
 public class UI2 : MonoBehaviour
 {
     public Text loantext, studytext, housetext, wagetext;
-    // Start is called before the first frame update
-    void Start()
-    {
  
 
-        
-    }
+    //This changes the texts in the bottom right square of the game
     public void economictexts()
     {
         GameObject economies = GameObject.Find("Door button");

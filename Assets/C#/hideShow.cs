@@ -6,10 +6,7 @@ public class hideShow : MonoBehaviour
 
     public GameObject Paneel;
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+   //Simple script for buttons that hide or show certain thing
 
     public void ShowPanel()
     {

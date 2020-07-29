@@ -23,18 +23,19 @@ public class timePoints : MonoBehaviour
         work();
     }
 
-    //Add money to player
+    //Add hours to player
     public void addhours(int hoursToAdd)
     {
         hours += hoursToAdd;
     }
 
-    //Subtract players money
+    //Subtract players hours
     public void subtracthours(int hoursToSubtract)
     {
         hours -= hoursToSubtract;
     }
 
+    //Turn certain buttons off and hide certain panels if they are active, when the amount of hours hits 0
     public void ButtonsOff()
     {
         /*if (hours <= 0 && button1.activeSelf)
@@ -82,6 +83,7 @@ public class timePoints : MonoBehaviour
         }
     }
 
+    //How work affects the amount of hours
     public void work()
     {
         GameObject workings = GameObject.Find("Door button");
@@ -92,6 +94,7 @@ public class timePoints : MonoBehaviour
         }
     }
 
+    //Limits so that the amount of hours can't be more or less than the limits
     public void Limitations()
     {
         if (hours <= 0)

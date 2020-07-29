@@ -6,12 +6,12 @@ public class playerMoney : MonoBehaviour
 {
 
     static public int money;
-    public Text moneyText, endmoneyText;
+    public Text moneyText, endmoneyText, gomoneyText;
     public GameObject Screen, Paneeel, caamera;
     // Start is called before the first frame update
     void Start()
     {
-        money = 2000;
+        money = 1000;   //The amount of money, the player starts with.
         moneyText.text = money.ToString();
     }
 
@@ -20,9 +20,13 @@ public class playerMoney : MonoBehaviour
     {
         moneyText.text = money.ToString() + "€";
         endmoneyText.text = "Voittaessasi pelin, rahaa sinulla oli " + money.ToString() + "€";
+        gomoneyText.text = "Hävitessäsi pelin, rahaa sinulla oli " + money.ToString() + "€";
         Limitations();
         GameOver();
     }
+
+
+    //Game over if your money hits 0
     public void GameOver()
     {
         if (money <= 0)
@@ -47,11 +51,12 @@ public class playerMoney : MonoBehaviour
         money -= moneyToSubtract;
     }
 
+    //Limits the amount of money you can have
     public void Limitations()
     {
         if (money <= 0)
         {
-            moneyText.text = "0€";
+            gomoneyText.text = "Hävisit koska rahasi loppuivat";
             money = 0;
         }
         else if (money >= 0)

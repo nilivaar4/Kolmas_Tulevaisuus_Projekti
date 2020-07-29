@@ -6,10 +6,7 @@ public class tietokoneKoodi : MonoBehaviour
 
     public GameObject Panel;
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    //Simple script for hiding and showing a certain thing
 
     public void ShowPanel()
     {

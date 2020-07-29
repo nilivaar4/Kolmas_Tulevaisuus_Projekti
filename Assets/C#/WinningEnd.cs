@@ -6,11 +6,7 @@ public class WinningEnd : MonoBehaviour
 {
     public int final_countdown = 0;
     public GameObject game, ending, cameraa;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -18,12 +14,13 @@ public class WinningEnd : MonoBehaviour
         won_the_game();
     }
     
+    //When called you get 1 closer to the "won_the_game"
     public void survived()
     {
         final_countdown += 1;
     }
 
-    public void won_the_game()
+    public void won_the_game()  //Game ends by hiding game elements, and showing the "Winning"-screenm when "survived()" is called 24 times.
     {
         if(final_countdown == 24)
         {

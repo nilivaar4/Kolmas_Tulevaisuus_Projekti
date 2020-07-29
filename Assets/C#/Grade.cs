@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Grade : MonoBehaviour
 {
     public int grade, countdown;
-    public Text gradeText, endgradeText;
+    public Text gradeText, endgradeText, gogradeText;
     public bool effort;
     //public GameObject ending, maingame;
     // Start is called before the first frame update
@@ -19,27 +19,36 @@ public class Grade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Change the texts based on your grade
         gradeText.text = "Keskiarvosi on " + grade.ToString();
         endgradeText.text = "Voittaessasi pelin, arvosanasi oli " + grade.ToString() + "/5";
+        gogradeText.text = "Hävitessäsi pelin, arvosanasi oli " + grade.ToString() + "/5";
+        if (gogradeText.text == "Hävitessäsi pelin, arvosanasi oli -2/5") //Hardcoded is like this, because couldn't find a better solution in a short time
+        {                                                                  //Basically you lose -2 grade every "turn" if you don't do school stuff, and that's why this works.
+            gogradeText.text = "Hävisit pelin, koska arvosanasi oli 0 liian kauan.";
+        }
         Limitations();
         //gameover();
     }
-    
 
 
+    //Raise players grade
     public void raiseGrade(int raise)
     {
         grade += raise;
     }
 
-    //Subtract players money
+    //Lower players grade
     public void lowerGrade(int lower)
     {
         grade -= lower;
     }
 
+    //Force the grade to stay between the limits
     public void Limitations()
     {
+
+
         if (grade <= 0)
         {
             grade = 0;
@@ -58,6 +67,7 @@ public class Grade : MonoBehaviour
             countdown = 3;
         }
     }
+    //Attempt at making gameover inside this script
     /*public void gameover()
     {
         if (countdown == 3)
@@ -79,6 +89,7 @@ public class Grade : MonoBehaviour
         }
     }*/
 
+    //How much time spent on homework. For Buttons
     public void hw1()
     {
         lowerGrade(1);

@@ -7,7 +7,7 @@ public class sleepTimes : MonoBehaviour
 {
 
     public GameObject stress, sleep;
-
+    //"Sleep" for buttons that affects certain things
     public void SleepShort()
     {
         stress.GetComponent<stressAmount>().subtractHealth(10);

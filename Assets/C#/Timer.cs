@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
         Limitations();
         gameover();
     }
+    //Countdown for game over
     public void Limitations()
     {
 
@@ -31,15 +32,17 @@ public class Timer : MonoBehaviour
             countdown = 3;
         }
     }
+    //Game over
     public void gameover()
     {
         if (countdown == 3)
         {
-            //häviä peli
+            //Turn the game elements off, and show the "game over"-screen
             maingame.gameObject.SetActive(false);
             ending.gameObject.SetActive(true);
         }
     }
+    //Timer that makes you lose the game if your grade is 0 for too long
     public void timer()
     {
         GameObject gradetext = GameObject.Find("gradetext");

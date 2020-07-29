@@ -15,13 +15,14 @@ public class chooseFood : MonoBehaviour
 
     void Update()
     {
+           //Bunch of random ints for the amount of health gained and money spent
         rngHP = rnd.Next(5, 21);
         smallrng = rnd.Next(1, 3);
         cheaprng = rnd.Next(50, 101);
         mediumrng = rnd.Next(150, 201);
         expensiverng = rnd.Next(275, 400);
     }
-
+    //The chosen food as a button
     public void Food1()
     {
         food.GetComponent<playerMoney>().subtractMoney(cheaprng);

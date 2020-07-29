@@ -9,8 +9,10 @@ public class timeMonth : MonoBehaviour
     public Text timeText;
     int i = 0;
 
+    
     void Start()
     {
+        //Define a string for each number
         names[0] = "Tammikuu";
         names[1] = "Helmikuu";
         names[2] = "Maaliskuu";
@@ -29,13 +31,9 @@ public class timeMonth : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
 
+    //Script that changes the month when called
     public void Months()
     {
         if (i < 11)
