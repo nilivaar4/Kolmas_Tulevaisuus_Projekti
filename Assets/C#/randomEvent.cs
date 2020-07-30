@@ -78,7 +78,7 @@ public class randomEvent : MonoBehaviour
         }
         if (choice == 9)
         {
-            rngText.text = "Äitisi synttäri ovat tällä viikolla, ja hän onkin ilmoittanut etukäteen, ettei halua mitään kallista lahjaa. Ostatko hänelle lahjan?";
+            rngText.text = "Äitisi syntymäpäivä on tällä viikolla, ja hän onkin ilmoittanut etukäteen, ettei halua mitään kallista lahjaa. Ostatko hänelle lahjan?";
         }
         if (choice == 10)
         {

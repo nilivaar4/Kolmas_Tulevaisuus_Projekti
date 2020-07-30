@@ -22,7 +22,7 @@ public class WinningEnd : MonoBehaviour
 
     public void won_the_game()  //Game ends by hiding game elements, and showing the "Winning"-screenm when "survived()" is called 24 times.
     {
-        if(final_countdown == 24)
+        if(final_countdown == 6)
         {
             game.gameObject.SetActive(false);
             cameraa.gameObject.SetActive(false);

@@ -8,7 +8,7 @@ public class weeklyMoney : MonoBehaviour
 {
    
     public GameObject week, health, timepoints, hw;
-    public int rentprice, electro, insurance, work, workstress, wifi, workhours, everything, home1, home2, electro1, plans1, plans2;
+    public int rentprice, electro, insurance, work, workstress, wifi, workhours, everything, home1, home2, electro1, plans1, plans2, network, networkplan;
     public bool loan, studymoney, housemoney, job1, job2, job3, grade;
     public Text debts;
 
@@ -36,7 +36,7 @@ public class weeklyMoney : MonoBehaviour
         {
             loan = false; //Can't have loan, if you don't have the "studymoney"
         }
-        everything = rentprice + electro + insurance + wifi;
+        everything = rentprice + electro + insurance + wifi + network;
         debts.text = "Kuukausittaiset kulut: " + everything.ToString() + "€"; 
     }
     
@@ -46,9 +46,9 @@ public class weeklyMoney : MonoBehaviour
     {
 
         week.GetComponent<playerMoney>().addMoney(work);
-        week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance + wifi);
+        week.GetComponent<playerMoney>().subtractMoney(rentprice + electro + insurance + wifi + network);
         health.GetComponent<stressAmount>().subtractHealth(15 + workstress + home1 + plans1);
-        health.GetComponent<stressAmount>().addHealth(home2 + electro1 + plans2);
+        health.GetComponent<stressAmount>().addHealth(home2 + electro1 + plans2 + networkplan);
         timepoints.GetComponent<timePoints>().addhours(560);
         //timepoints.GetComponent<timePoints>().subtracthours(workhours);
 
@@ -130,6 +130,21 @@ public class weeklyMoney : MonoBehaviour
     {
         wifi = 32;
         plans2 = 5;
+    }
+    public void networkplan1()
+    {
+        network = 0;
+        
+    }
+    public void networkplan2()
+    {
+        network = 0;
+        networkplan = 2;
+    }
+    public void networkplan3()
+    {
+        network = 10;
+        networkplan = 4;
     }
     //The chosen job
     public void Job1()

@@ -27,7 +27,7 @@ public class UI2 : MonoBehaviour
         }
         else if (weeklymoney.studymoney == true)
         {
-            studytext.text = "Opintolaina: 253€/kk";
+            studytext.text = "Opintoraha: 253€/kk";
         }
         if (weeklymoney.housemoney == false)
         {
